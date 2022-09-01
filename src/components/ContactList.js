@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react";
+import React, {useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContactsCrud } from "../context/ContactsCrudContext";
 import ContactCard from "./ContactCard";
@@ -8,7 +8,7 @@ const ContactList = (props) => {
 
   useEffect(() => {
     retrieveContacts();
-  }, []);
+  }, [contacts]);
 
 
   const renderContactList = (text.length < 1 ? contacts : searchResults).map((contact) => {

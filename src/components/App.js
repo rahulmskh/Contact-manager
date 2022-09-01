@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import "./App.css";
-import api from "../api/contacts";
+
 import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
@@ -11,8 +11,7 @@ import {ContactsCrudContextProvider} from "../context/ContactsCrudContext";
 
 
 function App(props) {
-  const LOCAL_STORAGE_KEY = "contacts";
-  const [contacts, setContacts] = useState([]);
+  
 
 
   return (
